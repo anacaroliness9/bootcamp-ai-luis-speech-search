@@ -1,7 +1,6 @@
 # Bootcamp de AI
 ## Inteligência Artificial na Prática 
 
-
 <div class="MCWHeader3">
 Fevereiro 2021
 </div>
@@ -29,20 +28,21 @@ Fevereiro 2021
   - [Execução dos Notebooks](#execução-dos-notebooks)
     - [Tarefa 1: Criar o aplicação do LUIS](#tarefa-1-criar-o-aplicação-do-luis)
     - [Tarefa 2: Realizar a Transcrição e Classificação dos áudios](#tarefa-2-realizar-a-transcrição-e-classificação-dos-áudios)
-    - [Tarefa 3: Realizar a busca dos audios classificados](#tarefa-3-realizar-a-busca-dos-audios-classificados)
+    - [Tarefa 3: Realizar o upload dos arquivos no Blob Storage](#tarefa-3-realizar-o-upload-dos-arquivos-no-blob-storage)
+    - [Tarefa 4: Realizar a busca dos áudios classificados](#tarefa-4-realizar-a-busca-dos-áudios-classificados)
   - [Visualização do resultado no Power Apps](#visualização-do-resultado-no-power-apps)
 
 <!-- /TOC -->
 
 ## Objetivo
-Solução para classificar ligações telefônicas e extrair informações utilizando serviços do Azure.
+Solução para classificar ligações telefônicas e extrair informações dos áudios utilizando serviços do Azure.
 <br>
 <br>
 
 ## Arquitetura Proposta
 
    <img src="media/arquitetura-bootcamp.png" alt="Architecture"
-	title="Architecture" width="70%" />
+   title="Architecture" width="70%" />
 <br>
 <br>
 
@@ -73,7 +73,7 @@ Nessa etapa, serão apresentadas as configurações do ambiente para ser possív
 
 3. Na aba **Basics**, preencha as informações abaixo:
 
-   Project detais:
+   Project details:
    - **Subscription**: Selecione a subscrição que está utilizando para esse workshop.
    - **Resource group**: Digite `hands-on-lab-SUFFIXO` como nome do seu grupo de recursos, onde SUFFIXO é o seu apelido, iniciais, ou outro valor para garantir um nome único.
 
@@ -94,16 +94,15 @@ Nessa tarefa, você provisionará um serviço de armazemento do Azure, onde voc�
 
    ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
 
-
 2. Busque por **storage** e selecione **Storage Account**.
    
    <img src="media/azure-portal-storage.png" alt="Storage Account"
-	title="Storage Account" width="70%" />
+   title="Storage Account" width="70%" />
 
 3. Clique em **Create**.
 
       <img src="media/create-storage-account.png" alt="Create Azure Account"
-	title="Create Azure Account" width="40%" height="50%" />
+   title="Create Azure Account" width="40%" height="50%" />
 
 4. Na aba **Basics**, preencha as informações abaixo:
    
@@ -119,8 +118,7 @@ Nessa tarefa, você provisionará um serviço de armazemento do Azure, onde voc�
    - **Replication**: Selecione *Locally-redundant storage (LRS)*.
 
       <img src="media/azure-storage-basics.png" alt=""
-	title="" width="70%" />
-
+   title="" width="70%" />
 
 5. Na aba **Review + create**, confirme se há uma mensagem de Validation passed e então clique em **Create**.
    <br>
@@ -131,12 +129,12 @@ Nessa etapa iremos preencher o arquivo **config\config_example.yml** com as conf
 1. Na barra de busca, busque por *storage* e selecione **Storage accounts**:
    
          <img src="media/azure-find-storage.png" alt="Find Storage Accounts"
-	title="Find Storage Accounts" width="50%" />
+   title="Find Storage Accounts" width="50%" />
 
 2. Clique no storage account criado anteriormente storageSUFFIX.
    
    <img src="media/storage-account.png" alt="Create Azure Account"
-	title="Create Azure Account" width="50%" height="70%" />
+   title="Create Azure Account" width="50%" height="70%" />
 
 3. No diretório **config** local abra o arquivo **config.yml** e preencha as seguintes informações:
       * Acesse *Keys and Endpoints*:
@@ -171,7 +169,6 @@ Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services
 
    ![](media/create-a-resource.png "Create a resource")
 
-
 2. Busque por **speech** no Azure Marketplace list selecione **Speech** clique em Create e em seguida Create novamente.
 
    <img src="media/search-speech.png" alt="Speech" title="Create Azure Account" width="60%"  />
@@ -183,7 +180,6 @@ Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services
    - **Subscription**: Selecione a subscrição que está utilizando para esse workshop.
    - **Resource group**:  Selecione o resoruce group hands-on-lab-SUFFIX na lista.
 
-
     Instance Details:
 
    - **Region**: Selecione a região que está utilizando para realizar esse workshop.
@@ -191,7 +187,6 @@ Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services
     - **Pricing tier**: Selecione Standard S0.
 
       ![](media/create-speech.png "Create Speech Service")
-
 
 4. Na aba **Review + create**, confirme se há uma mensagem de Validation passed e então clique em **Create**.
 
@@ -223,7 +218,6 @@ Exemplo:
 
    ```
 
-
 ### Tarefa 4: Criar o serviço Cognitive Services - LUIS
 
 Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services - LUIS) para realizar a classificação dos áudios.
@@ -232,13 +226,11 @@ Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services
 
    ![](media/create-a-resource.png "Create a resource")
 
-
 2. Busque por **luis** no Azure Marketplace list selecione **Language Understanding** clique em Create e em seguida Create novamente.
 
    <img src="media/search-luis.png" alt="Speech" title="Create Azure Account" width="60%"  />
 
 3. Na aba **Create**, preencha as informações abaixo:
-
 
    Create Options: **Authoring** 
 
@@ -254,7 +246,6 @@ Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services
    - **Authoring Pricing tier**: Selecione Free F0.
 
       ![](media/create-luis-auth.png "Create LUIS Service")
-
 
 4. Na aba **Review + create**, confirme se há uma mensagem de Validation passed e então clique em **Create**.
 
@@ -295,7 +286,6 @@ Nessa tarefa, será provisionado o Cognitive Search para realizar a busca dos á
 
    ![](media/create-a-resource.png "Create a resource")
 
-
 2. Busque por **search** no Azure Marketplace list selecione **Azure Cognitive Search** clique em Create e em seguida Create novamente.
 
    <img src="media/search-search.png" alt="Speech" title="Create Azure Account" width="60%"  />
@@ -316,7 +306,6 @@ Nessa tarefa, será provisionado o Cognitive Search para realizar a busca dos á
    - **Pricing tier**: Selecione Free F0.
 
       ![](media/create-search.png "Create LUIS Service")
-
 
 4. Na aba **Review + create**, confirme se há uma mensagem de Validation passed e então clique em **Create**.
 
@@ -355,6 +344,8 @@ Nessa etapa iremos preencher o arquivo **config\config_example.yml** com as conf
 
 Nessa etapa será criada uma aplicação do LUIS via código realizando os seguintes passos:
 * Criar as classes (intents)
+* Adicionar Intenções
+* Adicionar Entidades
 * Adicionar a base de treino (utterances)
 * Treinar o modelo
 * Implantar um endpoint do modelo para ser consumido pelo servico Speech.
@@ -365,20 +356,28 @@ Para realizar as atividades acima acessar o primeiro notebook: [1_create_luis](/
 
 ### Tarefa 2: Realizar a Transcrição e Classificação dos áudios
 
-Nessa etapa será realizado a transcrições dos áudios através da API Search do Cognitive Services integrada ao modelo do LUIS criado na tarefa anterior. Por fim, seus resultados serão salvos no Azure Storage. Para isso será realizado os seguintes passos:
-* Acessar o Azure Storage
+Nessa etapa será realizado a transcrições dos áudios através da API Search do Cognitive Services integrada ao modelo do LUIS criado na tarefa anterior.Para isso será realizado os seguintes passos:
 * Transcrever os áudios com o Speech e LUIS
 * Resumir resultado das classificações 
-* Salvar as transcrições e classificações no Azure Storage
+* Salvar as transcrições
 
 Para realizar as atividades acima acessar o segundo notebook: [2_speech_plus_luis](/2_speech_plus_luis.ipynb)
 
-### Tarefa 3: Realizar a busca dos audios classificados
+### Tarefa 3: Realizar o upload dos arquivos no Blob Storage
+
+Nessa etapa tanto os áudios quanto as transcrições serão salvas no Azure Storage. Para isso será realizado os seguintes passos:
+* Criação dos Containers
+* Upload dos Áudios e Transcrições
+* Checar os arquivos
+
+Para realizar as atividades acima acessar o segundo notebook: [2_speech_plus_luis](/2_speech_plus_luis.ipynb)
+
+### Tarefa 4: Realizar a busca dos áudios classificados
 
 Nessa etapa será realizado a criação do índice do Azure Search, e em seguida, a criação do documento json que irá popular o conteúdo do índice para possibilitar a busca dos audios. Para isso será realizado os seguintes passos:
 * Criação do índice do Azure Search
 * Criação do documento JSON do Azure Search
-* Upload do documento JSON documents no Azure Search
+* Upload do documento JSON no Azure Search
 
 Para realizar as atividades acima acessar o primeiro notebook: [3_search](/3_search.ipynb)
 
@@ -392,10 +391,11 @@ Nessa etapa será criado um app (front-end) para que os resultados da busca dos 
 
         
     <img src="media/power-apps-conf.png" alt="Power Apps Config"
-	title="Create Azure Account" width="80%"/>
+   title="Create Azure Account" width="80%"/>
 
 3. Posteriormente, é necessário a criação de um canvas para efetivamente fazer a visualização das palavras chaves e retornar a busca com os áudios. Para criar um canvas, siga o mesmo tutorial acima na parte *3-Visualize results*:
 
     <img src="media/powerapps-canvas.png" alt="Power Apps Canvas"
-	title="Create Azure Account" width="40%"  />
+   title="Create Azure Account" width="40%"  />
+
 

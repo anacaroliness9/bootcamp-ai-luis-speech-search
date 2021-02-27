@@ -1,4 +1,4 @@
-# Bootcamp de AI
+# Bootcamp de IA
 ## Inteligência Artificial na Prática 
 
 

@@ -383,7 +383,7 @@ Para realizar as atividades acima acessar o primeiro notebook: [3_search](/3_sea
 
 ## Visualização do resultado no Power Apps
 
-Nessa etapa será criado um app (front-end) para que os resultados da busca dos áudios sejam visualizados. Essa integração é do Azure Search com o PowerApps. 
+Nessa etapa será criado um app (front-end) para que os resultados da busca dos áudios sejam visualizados. Essa integração é da API do Azure Search com o PowerApps. 
 
 1. Primeiramente é necessário criar um custom connector e para cria-lo, por favor siga o seguinte tutorial:  [Tutorial: Consultar um índice do Cognitive Search por meio do Power Apps](https://docs.microsoft.com/pt-br/azure/search/search-howto-powerapps) 
    

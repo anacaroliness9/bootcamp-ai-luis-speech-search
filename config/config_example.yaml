@@ -1,0 +1,55 @@
+####################################################################################
+#
+#    Speech to Text and Classification with Cognitive Services, Cognitive Search
+#    and Azure Storage
+#    2/18/2021
+#
+#    Microsoft
+# 
+####################################################################################
+#
+#   Cognitive Services - Language Understanding (LUIS)
+# 
+####################################################################################
+luis_authoring:
+  auth_name: 
+  auth_key: 
+  auth_region: 
+luis_app:
+  app_id: 
+  app_name: 
+  app_desc: Luis app built with LUIS Python SDK.
+  app_version: 0.1
+  app_locale: pt-br 
+  
+####################################################################################
+#
+#    Azure Storage - Blob
+# 
+####################################################################################
+azure_storage:
+  container_name: audios
+  storage_name: 
+  conn_string: 
+  sas_token: 
+
+####################################################################################
+#
+#    Cognitive Services - Speech
+# 
+####################################################################################
+speech:
+  speech_key: 
+  speech_region: 
+  speech_language: pt-br
+
+####################################################################################
+#
+#    Cognitive Search
+# 
+####################################################################################
+search:
+  service_name: 
+  admin_key: 
+  index_name: audios-rnv
+  api_version: '?api-version=2020-06-30'

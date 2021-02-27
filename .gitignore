@@ -1,0 +1,5 @@
+audios/*wav
+transcricoes/*json
+.ipynb_checkpoints/
+config/config.yaml
+config/config_example copy.yaml

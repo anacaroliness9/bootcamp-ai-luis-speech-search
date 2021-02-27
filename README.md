@@ -220,7 +220,7 @@ Exemplo:
 
 ### Tarefa 4: Criar o serviço Cognitive Services - LUIS
 
-Nessa tarefa, será provisionado o serviço de Fala do Azure (Cognitive Services - LUIS) para realizar a classificação dos áudios.
+Nessa tarefa, será provisionado o serviço de Reconhecimento Vocal (Cognitive Services - LUIS) para realizar a classificação dos áudios.
 
 1. No [portal do Azure](https://portal.azure.com/), clique em **Show portal menu** no canto superior direito e escolha **+Create a resource** no menu.
 

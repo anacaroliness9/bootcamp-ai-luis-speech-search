@@ -301,11 +301,11 @@ Nessa tarefa, será provisionado o Cognitive Search para realizar a busca dos á
 
     Authoring Resource:
 
-   - **Service Name:** Forneça um nome único para essa instância: luis-SUFFIX.
+   - **Service Name:** Forneça um nome único para essa instância: search-SUFFIX.
    - **Location**: Selecione a região que está utilizando para realizar esse workshop.
    - **Pricing tier**: Selecione Free F0.
 
-      ![](media/create-search.png "Create LUIS Service")
+      ![](media/create-search.png "Create Cognitive Search")
 
 4. Na aba **Review + create**, confirme se há uma mensagem de Validation passed e então clique em **Create**.
 
@@ -348,7 +348,7 @@ Nessa etapa será criada uma aplicação do LUIS via código realizando os segui
 * Adicionar Entidades
 * Adicionar a base de treino (utterances)
 * Treinar o modelo
-* Implantar um endpoint do modelo para ser consumido pelo servico Speech.
+* Implantar um endpoint do modelo
 
 > Observação: Também seria possível criar através do [portal do LUIS](https://luis.ai).
 

@@ -17,7 +17,7 @@ luis_authoring:
   auth_region: 
 luis_app:
   app_id: 
-  app_name: 
+  app_name: luis-seguradora
   app_desc: Luis app built with LUIS Python SDK.
   app_version: 0.1
   app_locale: pt-br 
@@ -28,7 +28,8 @@ luis_app:
 # 
 ####################################################################################
 azure_storage:
-  container_name: audios
+  container_name_audios: audios
+  container_name_transcricoes: transcricoes
   storage_name: 
   conn_string: 
   sas_token: 

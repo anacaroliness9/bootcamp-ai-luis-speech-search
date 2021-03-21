@@ -35,7 +35,7 @@ Fevereiro 2021
 <!-- /TOC -->
 
 ## Objetivo
-Solução para classificar ligações telefônicas e extrair informações dos utilizando serviços do Azure.
+Solução para classificar ligações telefônicas e extrair informações das mesmas utilizando serviços do Azure.
 <br>
 <br>
 
